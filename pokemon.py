@@ -33,8 +33,9 @@ class Pokemon:
         
     def revive(self):
         if self.knocked_out == True:
-            print("You've been revived!")
+            self.knocked_out == False
             self.current_health == self.max_health
+            print("You've been revived!")
         else:
             print("You can only be revived when you're knocked out.\n")
     
@@ -46,8 +47,10 @@ class Pokemon:
         else:
             if (self.variety == "fire" and (opponent.variety == "water" or opponent.variety == "grass")) or (self.variety == "water" and opponent.variety == "grass"):
                 self.damage = (self.damage * 2)
+                print(f"{self.name} has dealt {self.damage} damange to {opponent.name}.\n")
             elif (self.variety == "grass" and (opponent.variety == "water" or opponent.variety == "fire")) or (self.variety == "water" and opponent.variety == "fire"):
                 self.damage = (self.damage * .5)
+                print(f"{self.name} has dealt {self.damage} damange to {opponent.name}.\n")
             else:
                 self.damage = self.damage * 1
                 print(f"{self.name} has dealt {self.damage} damange to {opponent.name}.\n")

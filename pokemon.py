@@ -34,7 +34,7 @@ class Pokemon:
     def revive(self):
         if self.knocked_out == True:
             self.knocked_out == False
-            self.current_health == self.max_health
+            self.current_health == self.current_health + self.max_health
             print("You've been revived!")
         else:
             print("You can only be revived when you're knocked out.\n")

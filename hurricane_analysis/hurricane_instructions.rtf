@@ -1,0 +1,178 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Hurricane Analysis\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 This project is slightly different than others you have encountered thus far on Codecademy. Instead of a step-by-step tutorial, this project contains a series of open-ended requirements which describe the project you\'92ll be building. There are many possible ways to correctly fulfill all of these requirements, and you should expect to use the internet, Codecademy, and other resources when you encounter a problem that you cannot easily solve.\
+\
+You will work to write several functions that organize and manipulate data about Category 5 Hurricanes, the strongest hurricanes as rated by their wind speed. Each one of these functions will use a number of parameters, conditionals, lists, dictionaries, string manipulation, and return statements.\
+\
+1. In order to complete this project, you should have completed the Loops and Dictionaries sections of the {\field{\*\fldinst{HYPERLINK "https://www.codecademy.com/learn/learn-python-3"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Learn Python 3 Course}}.\
+\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 2. Hurricanes, also known as cyclones or typhoons, are one of the most powerful forces of nature on Earth. Due to climate change caused by human activity, the number and intensity of hurricanes has risen, calling for better preparation by the many communities that are devastated by them. As a concerned environmentalist, you want to look at data about the most powerful hurricanes that have occurred.\
+Begin by looking at the 
+\f2 damages
+\f1  list. The list contains strings representing the total cost in USD($) caused by 
+\f2 34
+\f1  category 5 hurricanes (wind speeds \uc0\u8805  157 mph (252 km/h )) in the Atlantic region. For some of the hurricanes, damage data was not recorded (
+\f2 "Damages not recorded"
+\f1 ), while the rest are written in the format 
+\f2 "Prefix-B/M"
+\f1 , where 
+\f2 B
+\f1  stands for billions (
+\f2 1000000000
+\f1 ) and 
+\f2 M
+\f1  stands for millions (
+\f2 1000000
+\f1 ).\
+Write a function that returns a new list of updated damages where the recorded data is converted to float values and the missing data is retained as 
+\f2 "Damages not recorded"
+\f1 .\
+Test your function with the data stored in 
+\f2 damages
+\f1 .\
+3. Additional data collected on the 
+\f2 34
+\f1  strongest Atlantic hurricanes are provided in a series of lists. The data includes:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0
+\f2 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 names
+\f1 : names of the hurricanes\
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 months
+\f1 : months in which the hurricanes occurred\
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 years
+\f1 : years in which the hurricanes occurred \
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 max_sustained_winds
+\f1 : maximum sustained winds (miles per hour) of the hurricanes\
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 areas_affected
+\f1 : list of different areas affected by each of the hurricanes\
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 deaths
+\f1 : total number of deaths caused by each of the hurricanes\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 The data is organized such that the data at each index, from 
+\f2 0
+\f1  to 
+\f2 33
+\f1 , corresponds to the same hurricane.\
+For example, 
+\f2 names[0]
+\f1  yields the \'93Cuba I\'94 hurricane, which ouccred in 
+\f2 months[0]
+\f1  (October) 
+\f2 years[0]
+\f1  (1924).\
+Write a function that constructs a dictionary made out of the lists, where the keys of the dictionary are the names of the hurricanes, and the values are dictionaries themselves containing a key for each piece of data (
+\f2 Name
+\f1 , 
+\f2 Month
+\f1 , 
+\f2 Year
+\f1 ,
+\f2 Max Sustained Wind
+\f1 , 
+\f2 Areas Affected
+\f1 , 
+\f2 Damage
+\f1 , 
+\f2 Death
+\f1 ) about the hurricane.\
+Thus the key 
+\f2 "Cuba I"
+\f1  would have the value: 
+\f2 \{'Name': 'Cuba I', 'Month': 'October', 'Year': 1924, 'Max Sustained Wind': 165, 'Areas Affected': ['Central America', 'Mexico', 'Cuba', 'Florida', 'The Bahamas'], 'Damage': 'Damages not recorded', 'Deaths': 90\}
+\f1 .\
+Test your function on the lists of data provided.\
+4. In addition to organizing the hurricanes in a dictionary with names as the key, you want to be able to organize the hurricanes by year.\
+Write a function that converts the current dictionary of hurricanes to a new dictionary, where the keys are years and the values are lists containing a dictionary for each hurricane that occurred in that year.\
+For example, the key 
+\f2 1932
+\f1  would yield the value: 
+\f2 [\{'Name': 'Bahamas', 'Month': 'September', 'Year': 1932, 'Max Sustained Wind': 160, 'Areas Affected': ['The Bahamas', 'Northeastern United States'], 'Damage': 'Damages not recorded', 'Deaths': 16\}, \{'Name': 'Cuba II', 'Month': 'November', 'Year': 1932, 'Max Sustained Wind': 175, 'Areas Affected': ['Lesser Antilles', 'Jamaica', 'Cayman Islands', 'Cuba', 'The Bahamas', 'Bermuda'], 'Damage': 40000000.0, 'Deaths': 3103\}]
+\f1 .\
+Test your function on your hurricane dictionary.\
+5. You believe that knowing how often each of the areas of the Atlantic are affected by these strong hurricanes is important for making preparations for future hurricanes.\
+Write a function that counts how often each area is listed as an affected area of a hurricane. Store and return the results in a dictionary where the keys are the affected areas and the values are counts of how many times the areas were affected.\
+Test your function on your hurricane dictionary.\
+6. Write a function that finds the area affected by the most hurricanes, and how often it was hit.\
+Test your function on your affected area dictionary.\
+7. Write a function that finds the hurricane that caused the greatest number of deaths, and how many deaths it caused.\
+Test your function on your hurricane dictionary.\
+8. Just as hurricanes are rated by their windspeed, you want to try rating hurricanes based on other metrics.\
+Write a function that rates hurricanes on a mortality scale according to the following ratings, where the key is the rating and the value is the upper bound of deaths for that rating.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f2 \cf2 mortality_scale = \{0: 0,\
+                   1: 100,\
+                   2: 500,\
+                   3: 1000,\
+                   4: 10000\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1 \cf2 For example, a hurricane with a 
+\f2 1
+\f1  mortality rating would have resulted in greater than 
+\f2 0
+\f1  but less than or equal to 
+\f2 100
+\f1  deaths. A hurricane with a 
+\f2 5
+\f1  mortality rating would have resulted in greater than 
+\f2 10000
+\f1  deaths.\
+Store the hurricanes in a new dictionary where the keys are mortality ratings and the values are lists containing a dictionary for each hurricane that falls into that mortality rating.\
+Test your function on your hurricane dictionary.\
+9. Write a function that finds the hurricane that caused the greatest damage, and how costly it was.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 Test your function on your hurricane dictionary.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 10. Lastly, you want to rate hurricanes according to how much damage they cause.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 Write a function that rates hurricanes on a damage scale according to the following ratings, where the key is the rating and the value is the upper bound of damage for that rating.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f2 \cf2 damage_scale = \{0: 0,\
+                1: 100000000,\
+                2: 1000000000,\
+                3: 10000000000,\
+                4: 50000000000\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1 \cf2 For example, a hurricane with a 
+\f2 1
+\f1  damage rating would have resulted in damages greater than 
+\f2 0
+\f1  USD but less than or equal to 
+\f2 100000000
+\f1  USD. A hurricane with a 
+\f2 5
+\f1  damage rating would have resulted in damages greater than 
+\f2 50000000000
+\f1  USD (talk about a lot of money).\
+Store the hurricanes in a new dictionary where the keys are damage ratings and the values are lists containing a dictionary for each hurricane that falls into that damage rating.\
+Test your function on your hurricane dictionary.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 11. Great work! Visit {\field{\*\fldinst{HYPERLINK "https://discuss.codecademy.com/t/hurricane-analysis-challenge-project-python/462363"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 our forums}} to compare your project to our sample solution code. You can also learn how to host your own solution on GitHub so you can share it with other learners! Your solution might look different from ours, and that\'92s okay! There are multiple ways to solve these projects, and you\'92ll learn more by seeing others\'92 code. }
